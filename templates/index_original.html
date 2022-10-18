@@ -27,19 +27,19 @@ table {
       <div class="row mt-2">
         <div class="col-2" id="nav-col">
           <div class="list-group">
-            <a href="#" v-on:click="changeContent('summary')" class="list-group-item list-group-item-action">Summary</a>
-            <a href="#" v-on:click="changeContent('mapipods')" class="list-group-item list-group-item-action">Machine API</a>
-            <a href="#" v-on:click="changeContent('mcopods')" class="list-group-item list-group-item-action">Machine Config</a>
-            <a href="#" v-on:click="changeContent('clusterautoscalers')" class="list-group-item list-group-item-action">ClusterAutoscalers</a>
-            <a href="#" v-on:click="changeContent('machineautoscalers')" class="list-group-item list-group-item-action">MachineAutoscalers</a>
-            <a href="#" v-on:click="changeContent('machinesets')" class="list-group-item list-group-item-action">MachineSets</a>
-            <a href="#" v-on:click="changeContent('machines')" class="list-group-item list-group-item-action">Machines
+            <a v-on:click="changeContent('summary')" class="list-group-item list-group-item-action">Summary</a>
+            <a v-on:click="changeContent('mapipods')" class="list-group-item list-group-item-action">Machine API</a>
+            <a v-on:click="changeContent('mcopods')" class="list-group-item list-group-item-action">Machine Config</a>
+            <a v-on:click="changeContent('clusterautoscalers')" class="list-group-item list-group-item-action">ClusterAutoscalers</a>
+            <a v-on:click="changeContent('machineautoscalers')" class="list-group-item list-group-item-action">MachineAutoscalers</a>
+            <a v-on:click="changeContent('machinesets')" class="list-group-item list-group-item-action">MachineSets</a>
+            <a v-on:click="changeContent('machines')" class="list-group-item list-group-item-action">Machines
               {% if machines.notrunning|length > 0 %}<span class="badge bg-danger float-right">{{ machines.notrunning|length }}</span>{% endif %}
             </a>
-            <a href="#" v-on:click="changeContent('nodes')" class="list-group-item list-group-item-action">Nodes
+            <a v-on:click="changeContent('nodes')" class="list-group-item list-group-item-action">Nodes
               {% if nodes.notready|length > 0 %}<span class="badge bg-danger float-right">{{ nodes.notready|length }}</span>{% endif %}
             </a>
-            <a href="#" v-on:click="changeContent('csrs')" class="list-group-item list-group-item-action">CSRs
+            <a v-on:click="changeContent('csrs')" class="list-group-item list-group-item-action">CSRs
               {% if csrs.denied_or_failed|length > 0 %}<span class="badge bg-danger float-right">{{ csrs.denied_or_failed|length }}</span>{% endif %}
               {% if csrs.pending|length > 0 %}<span class="badge bg-warning float-right">{{ csrs.pending|length }}</span>{% endif %}
             </a>
